@@ -1,0 +1,78 @@
+package project;
+import java.awt.*; 
+import javax.swing.JComboBox;
+import javax.swing.JLabel;  
+import java.awt.*;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;  
+public class Frame3 extends Frame{  
+public Frame3(){
+setSize(300,300); 
+setLayout(null);  
+setVisible(true);
+}  
+public static void main(String args[]){  
+Frame3 f=new Frame3(); 
+JLabel l1; 
+l1=new JLabel("***** Vehicle Parking *****");  
+l1.setBounds(250,120, 250,80);  
+f.add(l1);
+l1=new JLabel(" ENTER INFO ");  
+l1.setBounds(350,170, 250,80);  
+f.add(l1);
+l1=new JLabel(" CAR ID# ");  
+l1.setBounds(270,210, 250,80);  
+f.add(l1);
+l1=new JLabel(" Token No# ");  
+l1.setBounds(270,250, 250,80);  
+f.add(l1);
+JButton b=new JButton("EXIT");
+b.setBounds(350,550,90, 40);    
+f.add(b);
+JLabel j13=new JLabel("DATE:");j13.setBounds(270,380,70,30);
+j13.setFont(new Font("Courier New",Font.ITALIC,20));
+String date1[]= {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
+final JComboBox dm=new JComboBox(date1);
+dm.setBounds(450,380,70,30);
+dm.setFont(new Font("Courier New",Font.ITALIC,20));
+f.add(j13);
+f.add(dm);
+JLabel j14=new JLabel("MONTH:");j14.setBounds(270,320,90,30);
+j14.setFont(new Font("Courier New",Font.ITALIC,20));
+	String num[]= {"jan","feb","mar","april","may","june","july","aug","sept","oct","nov","dec"};
+	final JComboBox cm=new JComboBox(num);
+	cm.setBounds(450,320,90,30);
+	cm.setFont(new Font("Courier New",Font.ITALIC,20));	
+f.add(j14);
+	f.add(cm);
+l1=new JLabel(" Gender ");  
+l1.setBounds(270,430, 250,80);  
+f.add(l1);
+Checkbox checkbox1 = new Checkbox("Male");  
+checkbox1.setBounds(510, 450,50,50);  
+Checkbox checkbox2 = new Checkbox("Female");  
+checkbox2.setBounds(630,450, 50,50);  
+f.add(checkbox1);  
+f.add(checkbox2);  
+f.setSize(400,400);  
+f.setLayout(null);  
+f.setVisible(true);  
+TextField t1,t2;  
+t1=new TextField("");  
+t1.setBounds(600,240, 150,20);  
+t2=new TextField("");  
+t2.setBounds(600,280, 150,20);  
+f.add(t1); f.add(t2);  
+f.setSize(400,400);  
+f.setLayout(null);  
+f.setVisible(true);  
+TextField t3,t4,t5; 
+t3=new TextField("");  
+t3.setBounds(600,320, 150,20);  
+f.setSize(400,400);  
+}
+}
